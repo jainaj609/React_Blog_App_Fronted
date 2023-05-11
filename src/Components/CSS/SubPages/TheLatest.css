@@ -1,0 +1,266 @@
+.The-Latest-Container {
+    width: 464px;
+    margin: auto;
+}
+
+.The-Latest-Child1 {
+    margin: 0 13px;
+}
+
+header {
+    padding: 20px 100px;
+    background-color: rgb(65, 39, 90);
+    color: rgb(173, 190, 147);
+    text-align: justify;
+}
+
+header h1:last-child {
+    margin: 10px;
+    font-size: large;
+    min-height: 50px;
+    max-height: 65px;
+    overflow: hidden;
+}
+
+.Insta {
+    background-color: rgb(191, 190, 190);
+    font-size: small;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 7px;
+}
+
+.Writer-Info-Box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.Writer-Info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Writer-Name {
+    font-size: 18px;
+}
+
+.Date-of-Public {
+    font-size: 14px;
+    color: #A2A2A2;
+}
+
+.claps {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.clap-Count {
+    color: #A2A2A2;
+    font-size: 14px;
+
+}
+
+.The-Latest-Boxx {
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.hrline-one {
+    background-color: #F0F0F0;
+}
+
+.The-Latest-Boxes {
+    display: flex;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.Content {
+    width: 371px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.contentLine {
+    font-size: large;
+    padding: 7px 0;
+    min-height: 50px;
+    max-height: 120px;
+    text-align: justify;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+.position {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: justify;
+    line-height: 1.4em;
+    font-family: serif;
+}
+
+.Header-Container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    height: 15vh;
+}
+
+.heading1 {
+    margin: 0;
+}
+
+.the1 {
+    font-size: 26px;
+}
+
+.siren1 {
+    font-size: 3.9em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.Get_Started_Text {
+    padding: 10px 20px;
+    color: #03A87C;
+    border: 2px solid #03A87C;
+}
+
+@media screen and (min-width: 375px) and (max-width: 600px) {
+
+    .LatestComponent {
+        margin: 0 10px;
+    }
+
+    header {
+        padding: 12px 56px;
+        color: rgb(210 238 166);
+    }
+
+    header h1 {
+        font-size: larger;
+    }
+
+    header h1:last-child {
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    .Writer-Info-Box {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .icons {
+        margin-left: 30px;
+        transform: scale(1.4);
+    }
+
+    header h1:last-child {
+        font-size: 13px;
+    }
+
+    .The-Latest-Container {
+        width: 302px;
+    }
+
+    .Mobile-Images {
+        height: 166px;
+        width: 302px;
+    }
+
+    section p {
+        width: 302px;
+    }
+
+    .position {
+        display: none;
+    }
+
+    .The-Latest-Boxes {
+        flex-direction: column;
+        overflow: unset;
+        gap: 20px;
+
+    }
+
+    .Writer-Info-Box1 {
+        display: none;
+    }
+
+    .The-Latest-Child1 {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: auto;
+    }
+
+    .The-Latest-Child1 img {
+        width: 78px;
+        height: 66px;
+        border-radius: 7px 7px 0 0;
+    }
+
+    .Content1 h2 {
+        font-size: 15px;
+        width: 210px;
+    }
+
+    .Content1 h2:nth-child(2) {
+        font-size: 10px;
+        font-weight: 500;
+        max-height: 38px;
+        line-height: 10px;
+        padding: 0;
+    }
+
+    .Content1 {
+        line-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        height: 66px;
+    }
+
+    .The-Latest-Child1 {
+        width: 302px;
+    }
+
+    .The-Latest-Boxx {
+        padding: 0;
+    }
+
+    .More-from-the-siren{
+        width: 302px;
+        margin: auto;
+        font-size: large;
+    }
+
+    .position-sticky{
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: #FAFAFA;
+    }
+}

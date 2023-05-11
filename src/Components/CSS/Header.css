@@ -1,0 +1,127 @@
+.parent-container {
+    /* padding: 10px; */
+}
+
+.heading {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.the {
+    font-size: xx-large;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.siren {
+    font-size: 4.5em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hrline {
+    margin-top: 20px;
+    background-color: #F0F0F0;
+    height: 3px;
+    border: none;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 600px) {
+
+    .heading {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .the {
+        font-size: x-large;
+    }
+
+    .siren {
+        font-size: 3.5em;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .links-mobile {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .child {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: -20px;
+    }
+
+    .child:hover {
+        background-color: gray;
+    }
+
+    .child:hover>.link {
+        color: #fff;
+    }
+
+    .hrline-link {
+        margin-bottom: 0px;
+        height: 1px;
+    }
+
+    .hrline-afterlink {
+        display: none;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .Header-Container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .Size {
+        font-size: x-large;
+    }
+
+    .Box-shadow {
+        box-shadow:
+            10px 0px 5px 0px #fff,
+            0px 3px 3px 0px #0000001A,
+            -10px 0px 5px 0px #fff,
+            0px -10px 5px 0px #fff;
+    }
+    .Box-shadow{
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+    .is-sticky{
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+}
