@@ -1,32 +1,57 @@
-import React, { useContext, useState } from 'react'
+import React, { useMemo, useState, useContext, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from "react-router-dom";
 import '../CSS/Bollywood.css'
-import { Store } from '../ContextAPI/ConTextAPI'
 import Header from './Header';
-import { useEffect } from 'react';
+
+import { Store } from '../ContextAPI/ConTextAPI';
+
 const Bollywood = () => {
 
-  const [pagedata, setPagedata] = useState([]);
-  const [dataContext] = useContext(Store);
+  const [, , token,] = useContext(Store);
+  console.log(token);
   const navigate = useNavigate();
   const { pageName } = useParams();
-  // var key;
-  // for (var k in dataContext) {
-  //   if (k === pageName) {
-  //     key = k;
-  //     break;
-  //   }
-  // }
-  useEffect(() => {
-    const getdata = async () => {
-      const res = await axios.get(`http://localhost:5500/app/category/${pageName}`)      
-      let data = res.data.Bollywood
-      setPagedata(data);
-      console.log(pagedata);
+
+
+  const [pagedata, setPagedata] = useState([]);
+  const [pageNamedata, setPageNamedata] = useState(pageName);
+
+  const name = useMemo(() => {
+    if (pageName === pageNamedata) {
+      return pageName;
     }
+    else {
+      setPageNamedata(pageName)
+      return pageNamedata;
+    }
+  })
+  const getdata = () => {
+    axios.get(`${process.env.REACT_APP_API_URL}/app/category/${name}`,{headers: {'Authorization':`Bearer ${token}`}})
+      .then(res => {
+        setPagedata(res.data[name])
+        if (res.data.msg === 'Unauthorised Person') {
+          alert(JSON.stringify(res.data))
+          navigate('/')
+        }
+      })
+
+  }
+
+  const verify = () => {
+    const string = ["Bollywood", "Technology", "Hollywood", "Fitness", "Food"];
+    if (string.includes(pageName)) {
+
+    }
+    else {
+      navigate('*')
+    }
+  }
+
+  useEffect(() => {
+    verify();
     getdata();
-  }, [pagedata])
+  }, [pageNamedata])
 
   const handleNavigation = (id, item, category) => {// two arg - 1. pathname - 2. state
     navigate(`/${pageName}/${id}`, { state: { item, category } });
@@ -34,20 +59,12 @@ const Bollywood = () => {
   return (
     <div>
       <Header />
-
-      {/* {
-          pagedata.map(item=>(
-            <p>{item.id}</p>
-          ))
-        }
-       */}
       <div className='section'>
 
         <div className='Bollywood'>
           <p className='Heading-Bollywood'>{pageName}</p>
-
           <div className='boxes'>
-            {dataContext[pageName].map((item, index, category) => (
+            {pagedata.map((item, index, category) => (
               <div className='box-container' key={index}>
                 <div className='box' onClick={() => handleNavigation(item.id, item, category)}>
                   <div>
@@ -73,18 +90,18 @@ const Bollywood = () => {
 
             <div className='boxes1' >
 
-              {dataContext[pageName].map((item, index) => (
+              {pagedata.map((item, index) => (
                 item.id === 1 ?
                   <div key={index}>
                     <div className='first-content'>
                       <div>
-                        <img className='TopPost_firstImage' src={dataContext[pageName][0].image.one} alt='' height={'266px'} width={'452px'} />
+                        <img className='TopPost_firstImage' src={pagedata[0].image.one} alt='' height={'266px'} width={'452px'} />
                       </div>
                       <div className='inline-content'>
-                        <h3>{dataContext[pageName][0].heading}</h3>
+                        <h3>{pagedata[0].heading}</h3>
                         <h1>1</h1>
                       </div>
-                      <p className='grey'><span className='released_year'>Released :</span> {dataContext[pageName][0].released}</p>
+                      <p className='grey'><span className='released_year'>Released :</span> {pagedata[0].released}</p>
                     </div>
                     <hr className='hrline' />
                   </div>

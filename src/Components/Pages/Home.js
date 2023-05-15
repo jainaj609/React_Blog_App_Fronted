@@ -23,7 +23,6 @@ const Home = () => {
                     <img src={dataContext.natureImages.logo3} className={'Title-images Title-images-three'} alt="BigCo Inc. logo" width={'449px'} height={'295px'} />
                 </div>
             </div>
-
             <p className='Heading-Latest'>The Latest</p>
 
             <div className='The-Latest-Box'>
@@ -53,7 +52,7 @@ const Home = () => {
                             <div className='box-container' key={index}>
                                 <div className='box' onClick={() => handleClick(item.id, item, category)}>
                                     <div>
-                                        <img  className='Images-Mobile' src={item.image.one} alt='item.heading' height={'184px'} width={'308px'} />
+                                        <img className='Images-Mobile' src={item.image.one} alt='item.heading' height={'184px'} width={'308px'} />
                                     </div>
                                     <div className='content'>
                                         <h3>{item.heading}</h3>

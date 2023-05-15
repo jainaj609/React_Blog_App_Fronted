@@ -62,7 +62,7 @@ const TheLatest = () => {
 
     return (
         <>
-            <SpecialHeader />
+            <SpecialHeader text={"Get Started"}/>
             <div className='position'>
                 <div className='claps'>
                     <img src={dataContext.react.ReactRythmImage} onClick={() => setClaps(claps + 1)} alt='clapImage' />

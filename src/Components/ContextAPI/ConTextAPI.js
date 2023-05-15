@@ -4,9 +4,11 @@ export const Store = createContext();
 const ConTextAPI = (props) => {
 
     const [state, setState] = useState(data);
+    const [token, setToken] = useState();
+
     return (
         <div>
-            <Store.Provider value={[state, setState]}>
+            <Store.Provider value={[state, setState, token, setToken]}>
                 {props.children}
             </Store.Provider>
         </div>

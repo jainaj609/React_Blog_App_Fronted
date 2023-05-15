@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.Register {
+    margin-top: 50px;
+    padding: 40px;
+    width: 450px;
+    height: max-content;
+    margin: auto;
+    border-radius: 3%;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: 0px 0px 1px 1px rgb(187, 187, 187);
+    transform: scale(0.9,0.9);
+}
+h1{
+    margin-bottom: 50px;
+}
+
+label {
+    font-weight: bold;
+    color: rgb(8, 38, 72);
+}
+
+input {
+    display: inline-block;
+    width: 95%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: 0px 0px 1px 1px rgb(187, 187, 187);
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    font-weight:100;
+}
+
+input:focus {
+    border: 1px solid rgb(45, 138, 245);
+    outline: 3px solid rgb(150, 191, 239);
+}
+
+input[type='submit'] {
+    border-radius: 35px;
+    width: 100%;
+    background-color: rgb(19, 44, 73);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    box-shadow: none;
+    font-family: 'Poppins', sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+form>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
